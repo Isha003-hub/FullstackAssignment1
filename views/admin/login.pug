@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login Page
+    body 
+        h1 Login Page 
+        form(action="/admin/login" method="POST")
+            .form-elem
+                label(for="user") Username: 
+                input(type="text" id="user" name="user")
+            .form-elem
+                label(for="pass") Password: 
+                input(type="password" id="pass" name="pass")
+            .form-elem
+                button(type="submit" class="btn btn-primary") Login
+            p. 
+                Don't have an account? #[a(href="/admin/register") Register now]
+
+
+
+
+

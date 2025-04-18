@@ -1,0 +1,22 @@
+extends ../common/layout 
+
+block layout-content 
+    h2 Add New Project
+    form(action="/projects/add/submit", method="POST")
+        .form-exp 
+            label(for="name") Name: 
+            input(type="text" id="name" name="name" placeholder="Zip n' Go")
+        .form-exp 
+            label(for="status") Status: 
+            input(type="text" id="status" name="status" placeholder="Planned")
+        .form-exp 
+            label(for="timespan") TimeSpan: 
+            input(type="text" id="timespan" name="timespan" placeholder="1 month")
+        .form-exp 
+            label(for="technology") Technologies Used:
+            input(type="text" id="technology" name="technology" placeholder="HTML,CSS,JavaScript")
+        .form-exp 
+            label(for="summary") Summary: 
+            textarea(id="summary" name="summary" rows="2" cols="30" placeholder="Zip n' Go is a travel app that provides last-minute planners with a personalized packing List.")
+        .form-exp 
+            button(type="submit" class="btn btn-primary add-btn") Add Project

@@ -1,0 +1,24 @@
+extends ../common/layout
+
+block layout-content
+  h2.text-center.my-4 Job Experience
+  .add-link
+    a(href="/experiences/add") Add Experience
+  .experience-content
+    .row
+      each item in experience 
+        .col-md-6
+          .card.mb-3
+            .card-body
+              h5.card-title= item.title
+              h6.card-subtitle.mb-2.text-muted= item.company
+              p.card-text
+                | Location: #{item.location}
+                br
+                | Start Year: #{item.startYear}
+                br
+                | End Year: #{item.endYear}
+              p.card-text= item.description
+              form(action="/experiences/delete/submit")
+                input(type="hidden" name="expId" value=item._id)
+                button(type="submit" class="delete-btn") Delete

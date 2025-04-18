@@ -1,0 +1,14 @@
+extends ../common/layout
+
+block layout-content
+    section#dashboard(class="text-center py-5 mb-5")
+        h1 Welcome to the Admin Dashboard!
+        p.lead.text-muted Manage your experience and projects efficiently.
+    
+    section#admin-actions(class="container py-5 text-center")
+        h2 Manage Content
+        p.text-muted Choose an option below to manage your experiences or projects.
+        div.text-center.mt-4
+            a.btn.btn-lg.btn-outline-primary(href="/experiences/list") Manage Experiences
+            |  
+            a.btn.btn-lg.btn-outline-secondary(href="/projects/list") Manage Projects

@@ -1,0 +1,25 @@
+extends ../common/layout 
+
+block layout-content 
+    h2 Add New Experience 
+    form(action="/experiences/add/submit", method="POST")
+        .form-exp
+            label(for="title") Title: 
+            input(type="text" id="title" name="title" placeholder="Web Developer")
+        .form-exp
+            label(for="company") Company: 
+            input(type="text" id="company" name="company" placeholder="Indus Infrastructure")
+        .form-exp 
+            label(for="location") Location: 
+            input(type="text" id="location" name="location" placeholder="Ahmedabad")
+        .form-exp 
+            label(for="startYear") Start Year:
+            input(type="number" id="startYear" name="startYear" placeholder="2022")
+        .form-exp 
+            label(for="endYear") End Year: 
+            input(type="number" id="endYear" name="endYear" placeholder="2023")
+        .form-exp 
+            label(for="description") Description: 
+            textarea(id="description" name="description" rows="2" cols="30" placeholder="Working on live website with differnet FrontEnd and BackEnd languages.")
+        .form-exp 
+            button(type="submit" class="btn btn-primary add-btn") Add Experience
