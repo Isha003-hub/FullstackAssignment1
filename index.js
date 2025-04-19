@@ -4,19 +4,14 @@ const sessions = require("express-session");
 const dotenv = require("dotenv");
 
 const cors = require("cors");
-
-
-//used to load the environment variable stored in .env loacl file
 dotenv.config();
 
-// initializing the express environment using variable apps 
-// (using it as json object to use express methods) and defining port to default or 8888
 const app = express();
 const port = process.env.PORT || '8888';
 const allowedOrigins = [
     "http://localhost:5173",
     "https://react-assignment-ishas-projects-1e8fb4df.vercel.app/",
-    "hthttps://fullstackassignment1-iga3.onrender.com"
+    "https://fullstackassignment1-iga3.onrender.com"
   ];
   
   app.use(cors({
