@@ -2,15 +2,14 @@ const express = require("express");
 const path = require("path");
 const sessions = require("express-session");
 const dotenv = require("dotenv");
-
-const cors = require("cors");
 dotenv.config();
+const cors = require("cors");
 
 const app = express();
 const port = process.env.PORT || '8888';
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://react-assignment-ishas-projects-1e8fb4df.vercel.app/",
+    "https://react-assignment-nine-ashen.vercel.app",
     "https://fullstackassignment1-iga3.onrender.com"
   ];
   
@@ -22,8 +21,8 @@ const allowedOrigins = [
         callback(new Error('Not allowed by CORS'));
       }
     },
-    credentials: true
-  }));
+    credentials:true
+}));
 app.set("views",path.join(__dirname,"views"));
 
 
